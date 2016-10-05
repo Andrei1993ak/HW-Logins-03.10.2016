@@ -6,7 +6,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Input your birthday"
+        android:text="@string/third_message"
         android:layout_marginTop="113dp"
         android:id="@+id/textViewActThird"
         android:layout_alignParentTop="true"
@@ -15,7 +15,7 @@
     <EditText
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:hint="03-01-1993"
+        android:hint="@string/birthday"
         android:id="@+id/editTextActThird"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
@@ -23,7 +23,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next"
+        android:text="@string/next"
         android:id="@+id/button"
         android:layout_marginBottom="55dp"
         android:layout_alignParentBottom="true"

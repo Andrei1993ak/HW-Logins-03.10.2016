@@ -6,7 +6,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Click Next if you want to resume from step "
+        android:text="@string/choose_message1"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="142dp"
@@ -14,14 +14,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Click reset if you want to start over "
+        android:text="@string/choose_message2"
         android:layout_below="@+id/textViewInfo"
         android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next"
+        android:text="@string/next"
         android:id="@+id/button2"
         android:layout_alignParentBottom="true"
         android:layout_alignEnd="@+id/textViewInfo"
@@ -31,7 +31,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Reset"
+        android:text="@string/reset"
         android:id="@+id/button3"
         android:layout_alignTop="@+id/button2"
         android:layout_alignStart="@+id/textViewInfo"

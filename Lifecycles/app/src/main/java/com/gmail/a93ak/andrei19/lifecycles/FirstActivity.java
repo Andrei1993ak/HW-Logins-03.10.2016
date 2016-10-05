@@ -3,7 +3,6 @@ package com.gmail.a93ak.andrei19.lifecycles;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
@@ -33,8 +32,8 @@ public class FirstActivity extends AppCompatActivity {
     }
 
     private void load(){
-        String name = getApplicationContext().getSharedPreferences(ZeroActivity.PREFERENCES,MODE_PRIVATE).getString(NAME,"null");
-        if(!name.equals("null"))
+        String name = getApplicationContext().getSharedPreferences(ZeroActivity.PREFERENCES,MODE_PRIVATE).getString(NAME,getResources().getString(R.string.null_value));
+        if(!name.equals(getResources().getString(R.string.null_value)))
             editTextActFirst.setText(name);
 
     }

@@ -8,7 +8,7 @@ public class ZeroActivity extends AppCompatActivity {
 
     public static final String PREFERENCES = "Preferences";
     public static final String LAST_ACTIVITY = "lastActivity";
-    public static final String IS_LOGGED ="isLogged";
+    public static final String IS_LOGGED = "isLogged";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,26 +16,26 @@ public class ZeroActivity extends AppCompatActivity {
         redirect();
     }
 
-    private void redirect(){
+    private void redirect() {
         if (isLogin()) {
-            startActivity(new Intent(this,MainActivity.class));
-        } else if (isLoginStart()){
-            startActivity(new Intent(this,ChooseActivity.class));
+            startActivity(new Intent(this, MainActivity.class));
+        } else if (isLoginStart()) {
+            startActivity(new Intent(this, ChooseActivity.class));
         } else {
-            startActivity(new Intent(this,FirstActivity.class));
+            startActivity(new Intent(this, FirstActivity.class));
         }
         finish();
     }
 
-    private boolean isLogin(){
-        return getApplicationContext().getSharedPreferences(PREFERENCES,MODE_PRIVATE).getBoolean(IS_LOGGED,false);
+    private boolean isLogin() {
+        return getApplicationContext().getSharedPreferences(PREFERENCES, MODE_PRIVATE).getBoolean(IS_LOGGED, false);
     }
 
-    private boolean isLoginStart(){
-        if(getApplicationContext().getSharedPreferences(PREFERENCES,MODE_PRIVATE).getInt(LAST_ACTIVITY,0)==0)
+    private boolean isLoginStart() {
+        if (getApplicationContext().getSharedPreferences(PREFERENCES, MODE_PRIVATE).getInt(LAST_ACTIVITY, 0) == 0)
             return false;
         else
             return true;
-        }
+    }
 
 }

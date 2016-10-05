@@ -11,44 +11,44 @@ public class ThirdActivity extends AppCompatActivity {
 
     public static final String AGE = "age";
     private EditText editTextActThird;
-    private boolean flag=false;
+    private boolean flag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third);
-        editTextActThird = (EditText)findViewById(R.id.editTextActThird);
+        editTextActThird = (EditText) findViewById(R.id.editTextActThird);
         load();
     }
 
     public void thirdButtonClick(View view) {
-        SharedPreferences.Editor editor = getApplicationContext().getSharedPreferences(ZeroActivity.PREFERENCES,MODE_PRIVATE).edit();
-        editor.putInt(ChooseActivity.LAST_ACTIVITY,3);
-        editor.putString(AGE,editTextActThird.getText().toString());
+        SharedPreferences.Editor editor = getApplicationContext().getSharedPreferences(ZeroActivity.PREFERENCES, MODE_PRIVATE).edit();
+        editor.putInt(ChooseActivity.LAST_ACTIVITY, 3);
+        editor.putString(AGE, editTextActThird.getText().toString());
         editor.commit();
-        startActivity(new Intent(this,FourActivity.class));
+        startActivity(new Intent(this, FourActivity.class));
         finish();
-        flag=true;
+        flag = true;
     }
 
     private void load() {
-        String age = getApplicationContext().getSharedPreferences(ZeroActivity.PREFERENCES,MODE_PRIVATE).getString(AGE,"null");
-        if(!age.equals("null"))
+        String age = getApplicationContext().getSharedPreferences(ZeroActivity.PREFERENCES, MODE_PRIVATE).getString(AGE, getResources().getString(R.string.null_value));
+        if (!age.equals(getResources().getString(R.string.null_value)))
             editTextActThird.setText(age);
     }
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(this,SecondActivity.class));
+        startActivity(new Intent(this, SecondActivity.class));
         finish();
     }
 
     @Override
     protected void onPause() {
-        if(!flag){
-            SharedPreferences.Editor editor = getApplicationContext().getSharedPreferences(ZeroActivity.PREFERENCES,MODE_PRIVATE).edit();
-            editor.putInt(ChooseActivity.LAST_ACTIVITY,2);
-            editor.putString(AGE,editTextActThird.getText().toString());
+        if (!flag) {
+            SharedPreferences.Editor editor = getApplicationContext().getSharedPreferences(ZeroActivity.PREFERENCES, MODE_PRIVATE).edit();
+            editor.putInt(ChooseActivity.LAST_ACTIVITY, 2);
+            editor.putString(AGE, editTextActThird.getText().toString());
             editor.commit();
         }
         super.onPause();

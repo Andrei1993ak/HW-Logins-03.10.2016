@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">Lifecycles</string>
+    <string name="app_name">LifeCycles</string>
+    <string name="null_value">null</string>
+    <string name="next">Next</string>
+    <string name="reset">Reset</string>
+    <string name="name">andrei</string>
+    <string name="SecondName">kazlouski</string>
+    <string name="birthday">03–01–1993</string>
+    <string name="sex">male</string>
+    <string name="country">Belarus</string>
+    <string name="finish">Finish</string>
+    <string name="clear">Clear</string>
+    <string name="choose_message1">Click Next if you want to resume from step</string>
+    <string name="choose_message2">Click reset if you want to start over</string>
+    <string name="first_message">Welcome! Input your name.</string>
+    <string name="second_message">Input your Second name.</string>
+    <string name="third_message">Input your birthday</string>
+    <string name="four_message">Input your sex</string>
+    <string name="five_message">Input your country</string>
 </resources>
